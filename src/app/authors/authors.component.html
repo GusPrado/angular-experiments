@@ -1,0 +1,9 @@
+<h2> {{authors.length}} Authors</h2>
+
+{{ price | currency:'BRL':true }}
+
+<ul>
+  <li *ngFor="let author of authors">
+    {{ author }}
+  </li>
+</ul>

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-fundamentals';
+  title: string;
+  isActive = false;
+  tweet = {
+    body: 'tweet body',
+    isLiked: false,
+    likesCount: 0
+  }
+
+  handleClick(){
+    this.isActive = !this.isActive
+  }
 }
