@@ -1,6 +1,6 @@
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 import { faHeart, faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,7 @@ import { TitleCasePipe } from './title-case.pipe';
 import { LikeComponent } from './like/like.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     TitleCasePipe,
     LikeComponent,
     ZippyComponent,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [AuthorsService],
   bootstrap: [AppComponent]
