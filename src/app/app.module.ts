@@ -1,3 +1,4 @@
+import { GithubFollowersService } from './services/github-followers.service';
 import { PostService } from './services/post.service';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 import { faHeart, faChevronCircleDown, faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 
+
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { TitleCasePipe } from './title-case.pipe';
@@ -15,6 +17,7 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { PostsComponent } from './posts/posts.component';
     ZippyComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
-    PostsComponent
+    PostsComponent,
+    GithubFollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import { PostsComponent } from './posts/posts.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthorsService, PostService],
+  providers: [AuthorsService, PostService, GithubFollowersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
